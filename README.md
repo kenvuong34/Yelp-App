@@ -41,3 +41,8 @@ Optional
 [ ] Implement the restaurant detail page.
 
 Walkthrough
+
+Auto layout view to 9 min
+set autolayout for thumb. have to set auto layout for other as name, address, etc.
+
+Get filters and search bar

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bfN-Kt-aaa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Businesses View Controller-->
@@ -26,12 +27,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="czM-hX-0X0" id="hKX-1U-1pm">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LfL-L7-dVB">
+                                                    <rect key="frame" x="8" y="15" width="65" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="8cC-I6-ogN"/>
+                                                        <constraint firstAttribute="width" constant="65" id="FBP-KW-Z1a"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9m-ZF-Mpb">
                                                     <rect key="frame" x="81" y="40" width="83" height="15"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1. Grand pu Bah" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdz-uV-qPP">
-                                                    <rect key="frame" x="81" y="15" width="127" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1. Grand pu Bah" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdz-uV-qPP">
+                                                    <rect key="frame" x="81" y="15" width="129" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -47,12 +55,6 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="469 Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-ko-HY7">
-                                                    <rect key="frame" x="172" y="37" width="98" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="88 Divisions St, mission bay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0H-gg-txt">
                                                     <rect key="frame" x="81" y="55" width="215" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -64,17 +66,20 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LfL-L7-dVB">
-                                                    <rect key="frame" x="8" y="15" width="65" height="65"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="65" id="8cC-I6-ogN"/>
-                                                        <constraint firstAttribute="width" constant="65" id="FBP-KW-Z1a"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="469 Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-ko-HY7">
+                                                    <rect key="frame" x="166" y="37" width="98" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="LfL-L7-dVB" firstAttribute="top" secondItem="hKX-1U-1pm" secondAttribute="top" constant="7" id="1EX-JI-PVO"/>
+                                                <constraint firstItem="LfL-L7-dVB" firstAttribute="top" secondItem="hKX-1U-1pm" secondAttribute="top" constant="8" id="1EX-JI-PVO"/>
+                                                <constraint firstItem="jdz-uV-qPP" firstAttribute="leading" secondItem="LfL-L7-dVB" secondAttribute="trailing" constant="8" id="8OI-DB-a9F"/>
                                                 <constraint firstItem="LfL-L7-dVB" firstAttribute="leading" secondItem="hKX-1U-1pm" secondAttribute="leading" constant="8" id="JBy-zh-dud"/>
+                                                <constraint firstItem="jdz-uV-qPP" firstAttribute="leading" secondItem="LfL-L7-dVB" secondAttribute="trailing" constant="8" id="SEm-8h-Tex"/>
+                                                <constraint firstItem="jdz-uV-qPP" firstAttribute="top" secondItem="hKX-1U-1pm" secondAttribute="top" constant="7" id="cEc-0a-9TH"/>
+                                                <constraint firstItem="jdz-uV-qPP" firstAttribute="top" secondItem="hKX-1U-1pm" secondAttribute="topMargin" constant="7" id="fA9-GE-WWq"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LfL-L7-dVB" secondAttribute="bottom" constant="12" id="nP0-Rh-FiO"/>
                                             </constraints>
                                         </tableViewCellContentView>
