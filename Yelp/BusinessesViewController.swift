@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var businesses: [Business]!
     
@@ -25,20 +25,15 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
 //            }
 //        })
         
-
+        
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 120
-        
-        
         Business.searchWithTerm("Restaurants", sort: .Distance, categories: ["asianfusion", "burgers"], deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
             self.businesses = businesses
             self.tableView.reloadData()
             for business in businesses {
                 println(business.name!)
                 println(business.address!)
-                println(business.ratingImageURL)
             }
         }
     }
@@ -48,11 +43,9 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
-  
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if businesses != nil {
-            return businesses!.count
+            return businesses.count
         } else {
             return 0
         }
@@ -64,8 +57,9 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         
         
         return cell
-        
     }
+    
+    
     /*
     // MARK: - Navigation
 
